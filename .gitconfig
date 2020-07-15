@@ -1,0 +1,32 @@
+[user]
+	name = John Gallo
+	email = jgallo@cpg.org
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+  	co = checkout
+  	ci = commit
+  	st = status
+  	br = branch
+  	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  	type = cat-file -t
+  	dump = cat-file -p
+	technologist = config user.email \"john@technologist.pro\"
+	brandorr = config user.email \"john@brandorr.com\"
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
+
+[apply]
+  ignorewhitespace = change
+  whitespace = nowarn
+
+[color]
+  interactive = true
+  branch = true
+  status = true
+
