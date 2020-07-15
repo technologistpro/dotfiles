@@ -109,3 +109,20 @@ prompt_context() {
     # prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
+
+# disk usage
+function duf {
+du -sk "$@" | sort -n | while read size fname; do for unit in k M G T P E Z Y; do if [ $size -lt 1024 ]; then echo -e "${size}${unit}\t${fname}"; break; fi; size=$((size/1024)); done; done
+}
+
+set_cpg_proxy() {
+  export http_proxy=http://proxy.cpg.org:8080/
+  export https_proxy=http://proxy.cpg.org:8080/
+}
+unset_cpg_proxy() {
+  unset http_proxy
+  unset https_proxy
+}
+
+#export PATH=/usr/local/bin:/usr/local/sbin::$PATH
+
