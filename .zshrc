@@ -127,3 +127,13 @@ unset_cpg_proxy() {
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# BEGIN ANSIBLE MANAGED BLOCK: pyenv
+if [ -e "$HOME/.pyenv/.pyenvrc" ]; then
+  source $HOME/.pyenv/.pyenvrc
+  if [ -e "$HOME/.pyenv/completions/pyenv.zsh" ]; then
+    source $HOME/.pyenv/completions/pyenv.zsh
+  elif [ -e "/usr/local/opt/pyenv/completions/pyenv.zsh" ]; then
+    source /usr/local/opt/pyenv/completions/pyenv.zsh
+  fi
+fi
+# END ANSIBLE MANAGED BLOCK: pyenv
