@@ -1,5 +1,5 @@
 # Docker on QNAP
-# export DOCKER_HOST=tcp://192.168.16.30:2376 DOCKER_TLS_VERIFY=1
+# export DOCKER_HOST=tcp://192.168.1.100:2376 DOCKER_TLS_VERIFY=1
 # DOCKER_API_VERSION=1.23 docker ps
 
 # bash-git-prompt
