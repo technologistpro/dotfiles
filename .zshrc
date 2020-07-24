@@ -117,8 +117,8 @@ du -sk "$@" | sort -n | while read size fname; do for unit in k M G T P E Z Y; d
 }
 
 set_cpg_proxy() {
-  export http_proxy=http://proxy.cpg.org:8080/
-  export https_proxy=http://proxy.cpg.org:8080/
+  export http_proxy=http://proxy.example.org:8080/
+  export https_proxy=http://proxy.example.org:8080/
 }
 unset_cpg_proxy() {
   unset http_proxy
